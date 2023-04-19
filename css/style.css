@@ -1,0 +1,164 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0 0;
+  padding: 0 0;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+a,
+li,
+link {
+  text-decoration: none !important;
+  list-style: none;
+  color: inherit !important;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+}
+
+nav {
+  right: 0;
+  color: white;
+  height: 100%;
+  background-color: black;
+}
+
+section {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+section::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: black;
+}
+
+/*  */
+i {
+  display: block;
+}
+
+/* ABOUT */
+.about__ContentIcon {
+  bottom: 30px;
+  right: 30px;
+}
+
+.about__ContentIcon a {
+  position: relative;
+}
+.about__ContentIcon i {
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 50px;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.about__ContentIcon i:hover {
+  color: white;
+  background-color: black;
+  border: 3px;
+  border-radius: 5px;
+}
+
+.phone__Number {
+  font-size: 28px;
+  position: absolute;
+  display: none;
+  z-index: -1;
+  transition: all 2s ease;
+}
+
+.about__ContentIcon a:hover .phone__Number {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  background-color: black;
+  color: white;
+  animation: moveleft;
+  animation-duration: 1s;
+}
+@keyframes moveleft {
+  0% {
+    left: -110px;
+  }
+  50% {
+    left: -155px;
+  }
+  100% {
+    left: -160px;
+  }
+}
+/* EXPERIENCE */
+
+/* EDUCATION */
+
+/* SKILLS */
+
+.skills__Content i {
+  font-size: 90px;
+}
+
+/* PROJECTS */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+/*  pc: width >= 1024px */
+@media screen and (min-width: 1025px) and (min-height: 1920px) {
+}
+
+/* tablet: 740<= width < 1024 */
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+}
+/* moblie: width < 740px */
+@media screen and (max-width: 739px) {
+   .navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    z-index: 11;
+  }
+}
