@@ -78,9 +78,9 @@ i {
 }
 
 .about__ContentIcon a {
-  position: relative;
 }
 .about__ContentIcon i {
+  position: relative;
   padding: 5px;
   border-radius: 50%;
   font-size: 50px;
@@ -96,33 +96,25 @@ i {
 }
 
 .phone__Number {
-  font-size: 28px;
+  font-size: 30px;
   position: absolute;
-  display: none;
+  top: 0;
+  left: -162px;
+  transition:  0.5s ease-in-out ;
+  height: 100%;
   z-index: -1;
-  transition: all 2s ease;
+  color: white;
 }
 
-.about__ContentIcon a:hover .phone__Number {
+.about__ContentIcon i:nth-child(1):hover .phone__Number {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  display: flex;
+  display: inline-block;
   background-color: black;
   color: white;
-  animation: moveleft;
-  animation-duration: 1s;
+  transform: translateX(-50px);
 }
-@keyframes moveleft {
-  0% {
-    left: -110px;
-  }
-  50% {
-    left: -155px;
-  }
-  100% {
-    left: -160px;
-  }
-}
+
 /* EXPERIENCE */
 
 /* EDUCATION */
@@ -152,7 +144,7 @@ i {
 }
 /* moblie: width < 740px */
 @media screen and (max-width: 739px) {
-   .navbar {
+  .navbar {
     position: fixed;
     top: 0;
     display: flex;
