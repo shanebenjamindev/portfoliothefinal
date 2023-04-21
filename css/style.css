@@ -126,7 +126,9 @@ i {
 }
 
 /* PROJECTS */
-
+.card-deck img {
+  height: 300px;
+}
 /* Navbar */
 .navbar {
   position: fixed;
