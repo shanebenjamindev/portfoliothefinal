@@ -36,11 +36,14 @@ link {
 }
 
 body {
-  min-height: 100vh;
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
   display: flex;
+}
+
+section {
+  padding: 10px;
 }
 
 nav {
@@ -100,7 +103,7 @@ i {
   position: absolute;
   top: 0;
   left: -162px;
-  transition:  0.5s ease-in-out ;
+  transition: 0.5s ease-in-out;
   height: 100%;
   z-index: -1;
   color: white;
@@ -126,8 +129,12 @@ i {
 }
 
 /* PROJECTS */
-.card-deck img {
-  height: 300px;
+.card img {
+  height: 200px;
+}
+
+.card {
+  margin: 15px 0;
 }
 /* Navbar */
 .navbar {
@@ -138,7 +145,7 @@ i {
   height: 100vh;
 }
 /*  pc: width >= 1024px */
-@media screen and (min-width: 1025px) and (min-height: 1920px) {
+@media screen and (min-width: 1025px) {
 }
 
 /* tablet: 740<= width < 1024 */
@@ -154,5 +161,20 @@ i {
     height: auto;
     width: 100%;
     z-index: 11;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h1,
+  h4,
+  h5 {
+    font-size: 16px !important;
+  }
+
+  /* Skill (small device) */
+  .skills__Content i {
+    font-size: 50px;
   }
 }
