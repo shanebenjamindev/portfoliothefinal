@@ -24,6 +24,18 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- FancyBox -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- Font Awesome -->
     <link
@@ -229,8 +241,12 @@
               <div class="row">
                 <!-- Project 1 -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
+                  
+                    <img src="./img/1.png" />
+                  </a>
+
                   <div class="card">
-                    <img class="card-img-top" src="./img/1.png" />
+                    <a href="./img/1.png" ><img class="card-img-top" src="./img/1.png" data-fancybox=gallery data-caption="Project #1" /></a>
                     <div class="card-body">
                       <h5 class="card-title">The Capstone Project</h5>
                       <p class="card-text">
@@ -239,7 +255,7 @@
                       <a
                         href="https://vpgiang0205.github.io/CapstoneProject/"
                         class="btn btn-primary"
-                        >Read More</a
+                        >View Demo</a
                       >
                     </div>
                   </div>
@@ -247,11 +263,11 @@
                 <!-- Project 2 -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
-                    <img class="card-img-top" src="./img/2.png" />
+                    <img class="card-img-top" src="./img/2.png"data-fancybox=gallery data-caption="Project #2" />
                     <div class="card-body">
                       <h5 class="card-title">JavaScript SelfLearning</h5>
                       <p class="card-text">Logic, Practice, JavaScript</p>
-                      <a href="#" class="btn btn-primary">Read More</a>
+                      <a href="#" class="btn btn-primary">View Demo</a>
                     </div>
                   </div>
                 </div>
@@ -262,7 +278,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Meipalay</h5>
                       <p class="card-text">HTML, SASS, JavaScript, jQuery</p>
-                      <a href="" class="btn btn-primary">Read More</a>
+                      <a href="" class="btn btn-primary">View Demo</a>
                     </div>
                   </div>
                 </div>
@@ -279,7 +295,7 @@
                       <a
                         href="https://vpgiang0205.github.io/SALESSCORE/"
                         class="btn btn-primary"
-                        >Read More</a
+                        >View Demo</a
                       >
                     </div>
                   </div>
@@ -295,7 +311,7 @@
                       <a
                         href="https://vpgiang0205.github.io/SAMAR/"
                         class="btn btn-primary"
-                        >Read More</a
+                        >View Demo</a
                       >
                     </div>
                   </div>
@@ -323,7 +339,7 @@
                         <a
                           href="https://vpgiang0205.github.io/CapstoneProject/"
                           class="btn btn-primary"
-                          >Read More</a
+                          >View Demo</a
                         >
                       </div>
                     </div>
@@ -335,7 +351,11 @@
                       <div class="card-body">
                         <h5 class="card-title">JavaScript SelfLearning</h5>
                         <p class="card-text">Logic, Practice, JavaScript</p>
-                        <a href="https://vpgiang0205.github.io/JSPracticeExercise/" class="btn btn-primary">Read More</a>
+                        <a
+                          href="https://vpgiang0205.github.io/JSPracticeExercise/"
+                          class="btn btn-primary"
+                          >View Demo</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -346,7 +366,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Meipalay</h5>
                         <p class="card-text">HTML, SASS, JavaScript, jQuery</p>
-                        <a href="" class="btn btn-primary">Read More</a>
+                        <a href="" class="btn btn-primary">View Demo</a>
                       </div>
                     </div>
                   </div>
@@ -363,7 +383,7 @@
                         <a
                           href="https://vpgiang0205.github.io/SALESSCORE/"
                           class="btn btn-primary"
-                          >Read More</a
+                          >View Demo</a
                         >
                       </div>
                     </div>
@@ -379,7 +399,7 @@
                         <a
                           href="https://vpgiang0205.github.io/SAMAR/"
                           class="btn btn-primary"
-                          >Read More</a
+                          >View Demo</a
                         >
                       </div>
                     </div>
@@ -416,5 +436,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- Fancy Box -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+    
+        // wow script
+        new WOW().init();
+
+        // fancybox script
+        Fancybox.bind('[data-fancybox=gallery]', {
+            Thumbs: {
+                type: "classic",
+                opacity: 0,
+            },
+        });
+    </script>
   </body>
 </html>
