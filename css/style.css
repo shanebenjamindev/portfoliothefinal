@@ -128,13 +128,45 @@ i {
   font-size: 90px;
 }
 
-/* PROJECTS */
-.card img {
-  height: 200px;
+.skills__Content i:first-child {
+  color: #e44d26;
 }
+
+.skills__Content i:nth-child(2) {
+  color: #0070ba;
+}
+
+.skills__Content i:nth-child(3) {
+  color: #e5a221;
+}
+
+.skills__Content i:nth-child(4) {
+  color: #ce679a;
+}
+
+.skills__Content i:last-child {
+  color: #777bb3;
+}
+
+/* PROJECTS */
 
 .card {
   margin: 15px 0;
+  height: 450px;
+}
+
+.card img {
+  cursor: pointer;
+}
+
+.card-footer{
+  position: relative;
+}
+
+.card .btn{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 /* Navbar */
 .navbar {
@@ -146,13 +178,23 @@ i {
 }
 /*  pc: width >= 1024px */
 @media screen and (min-width: 1025px) {
+  .card img {
+    height: 300px;
+  }
+ 
 }
 
 /* tablet: 740<= width < 1024 */
 @media screen and (min-width: 740px) and (max-width: 1024px) {
+   .card{
+    height: 320px;
+  }
 }
 /* moblie: width < 740px */
 @media screen and (max-width: 739px) {
+   .card{
+    height: auto;
+  }
   .navbar {
     position: fixed;
     top: 0;
