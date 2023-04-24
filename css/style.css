@@ -195,9 +195,20 @@ i {
    .card{
     height: 320px;
   }
+  .exp__header{
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* moblie: width < 740px */
 @media screen and (max-width: 739px) {
+  section {
+  padding: 0;
+}
+    .exp__header{
+    display: flex;
+    flex-direction: column;
+  }
    .card{
     height: auto;
   }
