@@ -75,18 +75,27 @@ i {
 }
 
 /* ABOUT */
-.about__ContentIcon {
-  bottom: 30px;
-  right: 30px;
+.about__Left h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-.about__ContentIcon a {
+.about__Left h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
+
+.about__Left p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
 .about__ContentIcon i {
   position: relative;
   padding: 5px;
   border-radius: 50%;
-  font-size: 50px;
+  font-size: 45px;
   transition: 0.3s ease;
   z-index: 1;
 }
@@ -107,6 +116,7 @@ i {
   height: 100%;
   z-index: -1;
   color: white;
+  opacity: 0;
 }
 
 .about__ContentIcon i:nth-child(1):hover .phone__Number {
@@ -116,6 +126,7 @@ i {
   background-color: black;
   color: white;
   transform: translateX(-50px);
+  opacity: 1;
 }
 
 /* EXPERIENCE */
@@ -157,7 +168,7 @@ i {
   transition: all 0.3s ease;
 }
 
-.card:hover{
+.card:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -165,15 +176,8 @@ i {
   cursor: pointer;
 }
 
-.card-footer{
-  position: relative;
-}
+/* CONTACT */
 
-.card .btn{
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
 /* Navbar */
 .navbar {
   position: fixed;
@@ -182,34 +186,79 @@ i {
   flex-direction: column;
   height: 100vh;
 }
+
+/* FOOTER */
+#back-to-top {
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+}
+
+#back-to-top:hover {
+  background-color: #555;
+}
+
+/* RESPONSIVE */
 /*  pc: width >= 1024px */
 @media screen and (min-width: 1025px) {
   .card img {
     height: 300px;
   }
- 
 }
 
 /* tablet: 740<= width < 1024 */
+
 @media screen and (min-width: 740px) and (max-width: 1024px) {
-   .card{
-    height: 320px;
-  }
-  .exp__header{
+  .about__Header {
     display: flex;
     flex-direction: column;
+  }
+  .exp__header {
+    display: flex;
+    flex-direction: column;
+  }
+  .edu__header {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    height: 320px;
   }
 }
 /* moblie: width < 740px */
 @media screen and (max-width: 739px) {
-  section {
-  padding: 0;
-}
-    .exp__header{
+  /* About */
+  .about__ContentIcon{
+    display: flex;
+    justify-content: center;
+  }
+  .exp__header {
     display: flex;
     flex-direction: column;
   }
-   .card{
+  
+  /* Education sm*/
+  .edu__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Skill sm */
+  .skills__Content i {
+    font-size: 50px;
+  }
+  /* Projects sm */
+  .card {
     height: auto;
   }
   .navbar {
@@ -221,84 +270,4 @@ i {
     width: 100%;
     z-index: 11;
   }
-
-  h3 {
-    font-size: 25px;
-  }
-
-  h1,
-  h4,
-  h5 {
-    font-size: 16px !important;
-  }
-
-  /* Skill (small device) */
-  .skills__Content i {
-    font-size: 50px;
-  }
-}
-.form-group {
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-}
-
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #0069d9;
-}
-
-.form {
-  background-color: grey;
-  padding: 50px;
-}
-
-.image-box {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-.image-box img {
-  transition: transform 0.3s ease-out;
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
-}
-
-.image-box:hover .image-overlay {
-  opacity: 1;
-}
-
-.image-box:hover img {
-  transform: scale(1.1);
 }
