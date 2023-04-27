@@ -84,99 +84,92 @@
     <main class="col-lg-11 col-md-9">
       <!-- ABOUT -->
       <section id="about" class="position-relative">
-        <div class="about__Header container-fluid">
-          <div class="row d-flex align-items-center">
-            <div class="about__Left col-lg-9">
-              <h1>VO PHONG GIANG</h1>
-              <h3>
+        <div class="container-fluid h-100">
+          <div class="row h-100">
+            <div
+              class="about__Left col-lg-9 col-md-8 col-sm-10 mx-auto vh-100 d-flex flex-column justify-content-center"
+            >
+              <h1 class="display-2 display-lg-4">VO PHONG GIANG</h1>
+              <h3 class="h5 h-lg-3">
                 Ho Chi Minh, phone: 0834718218,
                 <a href="mailto:vophonggiang0205@gmail.com"
                   >gmail: vophonggiang0205@gmail.com</a
                 >
               </h3>
-              <p>
+              <p class="lead">
                 I'm having more than 6 months experience working with backend
                 and frontend to deliver exceptional customer experiences. Adept
                 to contributing to a high collaborative work environment and
                 determining customer satisfaction.
               </p>
-
-              <h1 id="thanks" style="display: none">
-                THANKS FOR CONSIDERING GIVE ME THE OPPORTUNITY
-              </h1>
             </div>
-            <!-- CONTACT FORM -->
+
             <div
-              class="wow about__Right col-lg-3 animate__animated animate__fadeIn"
-              id="formContainer"
-              style="display: none"
+              class="about__Right col-lg-3 d-flex flex-column justify-content-end"
             >
-              <div class="row">
-                <div class="col">
+              <div class="about__ContentIcon icon text-right">
+                <a href="tel:+84834718218">
+                  <i class="fas fa-phone">
+                    <span class="phone__Number p-2">0834718218</span>
+                  </i></a
+                >
+                <button
+                  id="openFormBtn"
+                  href="mailto:vophonggiang0205@gmail.com"
+                >
+                  <i class="fas fa-envelope"></i>
+                </button>
+                <a href="https://github.com/phonggiang0205"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+              <!-- The contact form popup -->
+              <div id="contactFormPopup" class="popup">
+                <div class="popup-content wow fadeIn">
+                  <span class="close">&times;</span>
+                  <h2 class="text-center">Contact Me</h2>
+                  <h5 class="text-center p-4">
+                    THANKS FOR CONSIDERING GIVE ME THE OPPORTUNITY
+                  </h5>
                   <form
+                    id="contactForm"
+                    method="post"
                     action="https://formsubmit.co/vophonggiang0205@gmail.com"
-                    method="POST"
-                    class="form needs-validation"
-                    novalidate
                   >
-                    <div class="common__Title">
-                      <h2>CONTACT</h2>
-                    </div>
+                    <input type="hidden" name="_captcha" value="false" />
                     <div class="form-group">
-                      <label for="name">Name:</label>
+                      <label for="name">Your Name:</label>
                       <input
                         type="text"
+                        class="form-control"
                         id="name"
                         name="name"
-                        class="form-control"
                         required
                       />
-                      <div class="invalid-feedback">
-                        Please enter your name.
-                      </div>
                     </div>
-
                     <div class="form-group">
                       <label for="email">Your Email:</label>
                       <input
                         type="email"
+                        class="form-control"
                         id="email"
                         name="email"
-                        class="form-control"
                         required
                       />
-                      <div class="invalid-feedback">
-                        Please enter a valid email address.
-                      </div>
                     </div>
-
                     <div class="form-group">
                       <label for="message">Message:</label>
                       <textarea
+                        class="form-control"
                         id="message"
                         name="message"
-                        class="form-control"
+                        rows="5"
                         required
                       ></textarea>
-                      <div class="invalid-feedback">
-                        Please enter a message.
-                      </div>
                     </div>
-
-                    <input type="hidden" name="_next" value="#" />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input
-                      type="hidden"
-                      name="_subject"
-                      value="New contact form submission"
-                    />
-
-                    <div class="row-auto justify-content-end">
+                    <div class="text-right">
                       <button type="submit" class="btn btn-primary">
-                        Submit
-                      </button>
-                      <button type="button" id="closeBtn" class="btn btn-dark">
-                        Close
+                        Send
                       </button>
                     </div>
                   </form>
@@ -185,28 +178,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="container-fluid about__Footer d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center about__ContentIcon"
-        >
-          <div class="">
-            <a href="tel:+84834718218">
-              <i class="fa-solid fa-phone ml-2"
-                ><span class="phone__Number p-3">0834718218</span></i
-              ></a
-            >
-            <a href="https://www.facebook.com/vogiang252000/"
-              ><i class="fa-brands fa-facebook ml-2"></i
-            ></a>
-            <a href="https://github.com/vpgiang0205"
-              ><i class="fa-brands fa-github ml-2"></i
-            ></a>
-            <a href="mailto:vophonggiang0205@gmail.com"
-              ><i id="openForm" class="fa-solid fa-envelope ml-2"></i
-            ></a>
-          </div>
-        </div>
       </section>
-
       <!-- EXPERIENCE -->
       <section id="experience" class="">
         <div>
@@ -491,58 +463,7 @@
         </div>
       </section>
     </main>
-    <script>
-      const openFormBtn = document.getElementById("openForm");
-      const formContainer = document.getElementById("formContainer");
-      const closeBtn = document.getElementById("closeBtn");
-      const thankbtn = document.getElementById("thanks");
-
-      closeBtn.addEventListener("click", () => {
-        formContainer.style.display = "none";
-        thankbtn.style.display = "none";
-      });
-
-      openFormBtn.addEventListener("click", () => {
-        formContainer.style.display = "block";
-        thankbtn.style.display = "block";
-      });
-
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-        let isFormValid = true;
-
-        // Check if any input is empty
-        for (const [key, value] of formData.entries()) {
-          if (!value) {
-            isFormValid = false;
-            alert(`${key} cannot be empty.`);
-            break;
-          }
-        }
-
-        if (isFormValid) {
-          fetch(form.action, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(Object.fromEntries(formData.entries())),
-          })
-            .then((response) => {
-              if (response.ok) {
-                alert("Message sent successfully!");
-              } else {
-                alert("Message failed to send.");
-              }
-            })
-            .catch((error) => {
-              console.error(error);
-              alert("An error occurred while sending the message.");
-            });
-          formContainer.style.display = "none";
-        }
-      });
-    </script>
+    <script src="./js/script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
