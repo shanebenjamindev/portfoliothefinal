@@ -27,6 +27,12 @@ button {
   border: 0;
 }
 
+/* Variables */
+:root {
+  --primary-color: ;
+  --secondary-color: ;
+}
+
 a,
 li,
 link {
@@ -34,7 +40,28 @@ link {
   list-style: none;
   color: inherit !important;
 }
+/* Dark Mode */
+/* Light mode styles */
+body {
+  background-color: #fff;
+  color: #333;
+}
 
+.btn-dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .btn-dark-mode {
+  background-color: #fff;
+  color: #333;
+}
 body {
   font-weight: 400;
   font-size: 16px;
@@ -53,6 +80,20 @@ nav {
   background-color: black;
 }
 
+.navbar-brand img {
+  max-height: 40px;
+}
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: none; /* Hidden by default */
+  z-index: 9; /* Make sure the overlay is on top of other elements */
+}
 section {
   display: grid;
   align-items: center;
@@ -67,6 +108,21 @@ section::after {
   bottom: 0;
   height: 5px;
   background-color: black;
+}
+/* back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 160px;
+  display: none;
+}
+
+.back-to-top i {
+  font-size: large;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 /*  */
@@ -204,27 +260,12 @@ i {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  z-index: 1000;
+  background-color: black;
 }
 
-/* FOOTER */
-#back-to-top {
-  display: none;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  color: #fff;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: red;
-}
-
-#back-to-top:hover {
-  background-color: #555;
+.navbar span{
+  color: white;
 }
 
 /* RESPONSIVE */
@@ -236,15 +277,16 @@ i {
     font-size: 30px;
     position: absolute;
     top: 0;
-    left: -145px;
+    left: -128px;
     transition: 0.5s ease-in-out;
     height: 100%;
     z-index: -1;
     color: white;
     opacity: 0;
+    padding: 10px;
   }
 
-  .about__ContentIcon i:nth-child(1):hover .phone__Number {
+  .about__ContentIcon button:nth-child(1):hover .phone__Number {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     display: inline-block;
@@ -332,5 +374,11 @@ i {
     height: auto;
     width: 100%;
     z-index: 11;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
   }
 }
