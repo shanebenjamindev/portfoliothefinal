@@ -145,7 +145,7 @@ $(document).ready(function () {
   $('.btn-dark-mode').click(function () {
     // Toggle the class "dark-mode" on the body element
     $('body').toggleClass('dark-mode');
-
+      
     $('.card').toggleClass('bg-dark');
     // Toggle the button text between "Dark Mode" and "Light Mode"
     var buttonText = $(this).text() === 'Dark Mode' ? 'Light Mode' : 'Dark Mode';
